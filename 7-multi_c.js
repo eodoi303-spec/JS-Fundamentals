@@ -1,16 +1,15 @@
 // 7-multi_c.js
 
-const args = process.argv.slice(2);
-const x = parseInt(args[0], 10);
+// Get the first argument and try to convert it to an integer
+const x = parseInt(process.argv[2]);
 
-if (isNaN(x) || x <= 0) {
+// Check if the argument is a valid number
+if (isNaN(x)) {
   console.log("Missing number of occurrences");
 } else {
-  let i = 0;
-  let output = "";
-  while (i < x) {
-    output += "C is fun\n";
-    i++;
+  let count = 0;
+  while (count < x) {
+    console.log("C is fun");
+    count++;
   }
-  console.log(output.trim());
 }
